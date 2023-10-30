@@ -1,10 +1,11 @@
-package org.techreturners.mockdata;
+package org.techreturners.streams.mockdata;
 
 import com.google.common.io.Resources;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import org.apache.commons.io.IOUtils;
-import org.techreturners.Car;
+import org.techreturners.streams.data_models.Car;
+
 
 import java.io.IOException;
 import java.io.InputStream;
