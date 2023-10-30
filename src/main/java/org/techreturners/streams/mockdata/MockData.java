@@ -5,6 +5,7 @@ import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import org.apache.commons.io.IOUtils;
 import org.techreturners.streams.data_models.Car;
+import org.techreturners.streams.data_models.Person;
 
 
 import java.io.IOException;
@@ -24,5 +25,14 @@ public class MockData {
         }.getType();
         return new Gson().fromJson(json, listType);
     }
+
+    public static List<Person> getPeople() throws IOException {
+        InputStream inputStream = Resources.getResource("people.json").openStream();
+        String json = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
+        Type listType = new TypeToken<ArrayList<Person>>() {
+        }.getType();
+        return new Gson().fromJson(json, listType);
+    }
+
 
 }
